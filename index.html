@@ -9,24 +9,6 @@
 <body>
 	<button type="button" id="btn" data-send="Hello cái cc :v">Click me</button>
 	<div id="result"></div>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#btn").click(function(){
-				var data = $(this).attr("data-send");
-				$.ajax({
-					url:"process.php",
-					type:"POST",
-					data:"data=" + data,
-					async: true,
-					success:function(result){
-						//Tham số res chứa kết quả trả về. Đây là tham số mặc định.
-			            //Bạn có thể đổi tên là result, ketqua,... ở đây tôi đặt là res.
-			            //Thẻ div#result sẽ có nội dung trả về là biến res chứa dữ liệu được in ra từ process.php
-						$("#result").html(result);
-					}
-				});
-			});
-		});
-	</script>
+
 </body>
 </html>
